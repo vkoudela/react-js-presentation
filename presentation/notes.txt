@@ -15,7 +15,7 @@
 - regular vs virtual DOM objašnjenje / nee jQuery
 - 2way vs 1way - mvvm vs v
 + teško je uspoređivati kad to nisu slične stvari (React+Redux)
-+ napravljen je za jednu stvar (Facebook forme, realtime update)
++ napravljen je za jednu stvar (Facebook forme, realtime update, burza)
 6. Learning curve
 - React - boljke Javascripta se prenose u React
 7. React in ngReact
@@ -23,21 +23,25 @@
 9. Tehnikalije React
 - renderiranje react komponenti - ReactDOM ili nestanje
 - komponenta živi u svom sendboxu
-- daje slobodu korištenja
 10. React components
 - instance - pozivanje setProps i setState izvana
 11. React props
 - prosljeđivanje podataka pri renderiranje i prema drugim komponentama
 12. Nestanje childrena
-13. React SVG
-13. Component lifecycle
+13. React refs
+- osim refsa postoji key i dangerouslySetInnerHTML
+- referenca prema DOM node-u
+- daje slobodu korištenja zbog mogućnosti implementacije 3rd party komponenti
+14. React SVG
+15. Component lifecycle
 - mogućnost rada s nekim drugim libovima
-14. Tooling - React Chrome console
-15. Problem Reacta / problem Javascripta
-+ radi samo jednu stvar, nema ajaxa, nema ničega pa treba 3rd party libove
 16. Babel CLI - zapakiraj file u nativni javascript
+17. Tooling - React Chrome console
+18. Problem Reacta / problem Javascripta
++ radi samo jednu stvar, nema ajaxa, nema ničega pa treba 3rd party libove
++ reference javascripta / ImmutableJS
 
-17. Gotova rješenja u Reactu: React-Bootstrap, Spectable
+19. Gotova rješenja u Reactu: React-Bootstrap, Spectable
 
-18. Primjene reacta: Facebook, comment box, WhatsApp web, Instagram.com, Messenger.com
-19. Speedtalk.com.au, questionme.online
+20. Primjene reacta: Facebook, comment box, WhatsApp web, Instagram.com, Messenger.com
+21. Speedtalk.com.au

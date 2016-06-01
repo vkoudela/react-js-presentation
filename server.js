@@ -15,6 +15,10 @@ app.use(require("webpack-dev-middleware")(compiler, {
 
 app.use(require("webpack-hot-middleware")(compiler));
 
+app.get("/devtools-full.gif", function(req, res) {
+  res.sendFile(path.join(__dirname, "assets/devtools-full.gif"));
+});
+
 app.get("*", function(req, res) {
   res.sendFile(path.join(__dirname, "index.html"));
 });

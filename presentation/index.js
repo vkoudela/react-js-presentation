@@ -11,6 +11,7 @@ import preloader from "../src/utils/preloader";
 import createTheme from "../src/themes/default";
 
 import Interactive from "../assets/interactive";
+import InteractiveSvg from "../assets/interactive-svg";
 
 require("normalize.css");
 require("../src/themes/default/index.css");
@@ -199,116 +200,139 @@ export default class Presentation extends React.Component {
             </Heading>
             <Interactive/>
           </Slide>
-
-          <Slide transition={["zoom", "fade"]} bgColor="primary">
-            <Heading caps fit>Flexible Layouts</Heading>
-            <Layout>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Left
-                </Heading>
-              </Fill>
-              <Fill>
-                <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-                  Right
-                </Heading>
-              </Fill>
-            </Layout>
-          </Slide>
-          <Slide transition={["slide"]} bgColor="black">
-            <BlockQuote>
-              <Quote>Wonderfully formatted quotes</Quote>
-              <Cite>Ken Wheeler</Cite>
-            </BlockQuote>
-          </Slide>
-          <Slide transition={["spin", "zoom"]} bgColor="tertiary">
-            <Heading caps fit size={1} textColor="primary">
-              Inline Markdown
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              React refs
             </Heading>
-            <Markdown>
-              {`
-![Markdown Logo](${images.markdown.replace("/", "")})
-
-You can write inline images, [Markdown Links](http://commonmark.org), paragraph text and most other markdown syntax
-* Lists too!
-* With ~~strikethrough~~ and _italic_
-* And let's not forget **bold**
-              `}
-            </Markdown>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-refs.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
           </Slide>
-          <Slide transition={["slide", "spin"]} bgColor="primary">
-            <Heading caps fit size={1} textColor="tertiary">
-              Smooth
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              React nesting / components
             </Heading>
-            <Heading caps fit size={1} textColor="secondary">
-              Combinable Transitions
-            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-nesting.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
           </Slide>
-          <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
-            <List>
-              <Appear><ListItem>Inline style based theme system</ListItem></Appear>
-              <Appear><ListItem>Autofit text</ListItem></Appear>
-              <Appear><ListItem>Flexbox layout system</ListItem></Appear>
-              <Appear><ListItem>PDF export</ListItem></Appear>
-              <Appear><ListItem>And...</ListItem></Appear>
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              React nesting / children
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-nesting2.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              React SVG
+            </Heading>
+            <InteractiveSvg/>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Component lifecycle
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-lifecycle.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Babel CLI
+            </Heading>
+            <CodePane
+              source={require("raw!../assets/babel-cli.txt")}
+              margin="20px auto"
+              textSize="1.4rem"
+            />
+          </Slide>
+          <Slide transition={["spin"]} bgColor="tertiary">
+            <Heading size={3} textColor="primary" textFont="primary">
+              React Dev Tools
+            </Heading>
+            <img src="/devtools-full.gif"/>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Mane Reacta
+            </Heading>
+            <List textColor={color.textColor}>
+              <ListItem>Previše mogućnosti buildanja vodi do nejasnoća (Gulp, Grunt, Webpack)</ListItem>
+              <ListItem>Kod kompleksnijih komponenti, potrebna je neka standardizacija (Flux, Redux,...)</ListItem>
+              <ListItem>Za konkretni posao je potrebno koristiti 3rd party libove</ListItem>
+              <ListItem>Problemi JavaScripta se vide u Reactu</ListItem>
+            </List>
+            <Appear>
+              <CodePane
+                lang="js"
+                source={require("raw!../assets/javascript-issue")}
+                margin="20px auto"
+                textSize="1rem"
+              />
+            </Appear>
+          </Slide>
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Mane Reacta
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-state-problem.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["slide"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Kada koristiti React?
+            </Heading>
+            <List textColor={color.textColor}>
+              <ListItem>kod izrade manjih komponenta s točno definiranom funkcionalnošću</ListItem>
+              <ListItem>kod izrade kompleksnih i specijaliziranih sučelja</ListItem>
+              <ListItem>kada je potrebno često i brzo mijenjati prikaz podataka</ListItem>
             </List>
           </Slide>
           <Slide transition={["slide"]} bgColor="primary">
-            <Heading size={1} caps fit textColor="tertiary">
-              Your presentations are interactive
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Gotove React komponente
             </Heading>
-            <Interactive/>
+            <List textColor={color.textColor}>
+              <ListItem><Link href="https://react-bootstrap.github.io" target="_blank" textColor="tertiary">React-Bootstrap</Link></ListItem>
+              <ListItem><Link href="http://react-toolbox.com" target="_blank" textColor="tertiary">React-Toolbox</Link></ListItem>
+              <ListItem><Link href="http://www.material-ui.com" target="_blank" textColor="tertiary">Material-UI</Link></ListItem>
+            </List>
           </Slide>
-          <Slide transition={["slide"]} bgColor="primary"
-            notes="Hard to find cities without any pizza"
-          >
-            <Heading size={4} caps textColor="secondary" bgColor="white" margin={10}>
-              Pizza Toppings
+          <Slide transition={["zoom"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              Gdje se React već koristi?
             </Heading>
-            <Layout>
-              <Table>
-                <thead>
-                  <TableRow>
-                    <TableHeaderItem/>
-                    <TableHeaderItem>2011</TableHeaderItem>
-                    <TableHeaderItem>2013</TableHeaderItem>
-                    <TableHeaderItem>2015</TableHeaderItem>
-                  </TableRow>
-                </thead>
-                <tbody>
-                  <TableRow>
-                    <TableItem>None</TableItem>
-                    <TableItem>61.8%</TableItem>
-                    <TableItem>39.6%</TableItem>
-                    <TableItem>35.0%</TableItem>
-                  </TableRow>
-                  <TableRow>
-                    <TableItem>Pineapple</TableItem>
-                    <TableItem>28.3%</TableItem>
-                    <TableItem>54.5%</TableItem>
-                    <TableItem>61.5%</TableItem>
-                  </TableRow>
-                  <TableRow>
-                    <TableItem>Pepperoni</TableItem>
-                    <TableItem/>
-                    <TableItem>50.2%</TableItem>
-                    <TableItem>77.2%</TableItem>
-                  </TableRow>
-                  <TableRow>
-                    <TableItem>Olives</TableItem>
-                    <TableItem/>
-                    <TableItem>24.9%</TableItem>
-                    <TableItem>55.9%</TableItem>
-                  </TableRow>
-                </tbody>
-              </Table>
-            </Layout>
+            <List textColor={color.textColor}>
+              <ListItem>Facebook & Facebook Comment Box</ListItem>
+              <ListItem>Instagram</ListItem>
+              <ListItem>WhatsApp Web</ListItem>
+              <ListItem>Messenger.com</ListItem>
+              <ListItem><Link href="http://getonepager.com/?onepager=1&guest=1" target="_blank" textColor="tertiary">Onepager.com</Link></ListItem>
+              <ListItem><Link href="http://beta.speedtalk.com.au/#call-rates" target="_blank" textColor="tertiary">SpeedTalk.com.au</Link></ListItem>
+            </List>
           </Slide>
-          <Slide transition={["spin", "slide"]} bgColor="tertiary">
-            <Heading size={1} caps fit lineHeight={1.5} textColor="primary">
-              Made with love in Seattle by
+          <Slide transition={["slide", "zoom"]} bgColor="primary">
+            <Heading size={3} textColor="secondary">
+              Hvala
             </Heading>
-            <Link href="http://www.formidable.com"><Image width="100%" src={images.logo}/></Link>
           </Slide>
         </Deck>
       </Spectacle>

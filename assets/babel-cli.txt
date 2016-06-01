@@ -1,0 +1,3 @@
+$ npm install --save-dev babel-cli
+
+$ babel --presets react js/src --out-dir js/dist
