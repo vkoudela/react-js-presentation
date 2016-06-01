@@ -1,7 +1,7 @@
 import React from "react";
 
 import {
-  Appear, BlockQuote, Cite, CodePane, Deck, Fill,
+  Appear, BlockQuote, Cite, Code, CodePane, Deck, Fill,
   Heading, Image, Layout, Link, ListItem, List, Markdown, Quote, Slide, Spectacle,
   TableHeaderItem, TableItem, TableRow, Table, Text, S
 } from "../src";
@@ -16,7 +16,6 @@ require("normalize.css");
 require("../src/themes/default/index.css");
 
 const images = {
-  city: require("../assets/city.jpg"),
   logo: require("../assets/formidable-logo.svg"),
   markdown: require("../assets/markdown.png"),
   reactLogo: require("../assets/react.png")
@@ -82,33 +81,125 @@ export default class Presentation extends React.Component {
             <Text textColor="tertiary">Angular / Vue / Ember / Polymer / Riot / ...</Text>
             <Text textColor="tertiary">Node.js / MeteorJS / ...</Text>
           </Slide>
-          <Slide transition={["none"]} bgColor="primary">
+          <Slide transition={["zoom"]} bgColor="primary">
             <Heading size={1} caps textColor="secondary" textFont="primary">
-              Javascript
+              React vs Angular
             </Heading>
-            <Text>&nbsp;</Text>
-            <Text textColor="tertiary">ES5 / ES6 / ES2016 / ...</Text>
-            <Text textColor="tertiary"><S type="underline" textColor="secondary">Babel</S> / TypeScript / ...</Text>
-            <Text textColor="tertiary">Angular / Vue / Ember / Polymer / Riot / ...</Text>
-            <Text textColor="tertiary">Node.js / MeteorJS / ...</Text>
-          </Slide>
-          <Slide transition={["slide"]} bgImage={images.city.replace("/", "")} bgDarken={0.75}>
-            <Appear fid="1">
-              <Heading size={1} caps fit textColor="primary">
-                Full Width
-              </Heading>
-            </Appear>
-            <Appear fid="2">
-              <Heading size={1} caps fit textColor="tertiary">
-                Adjustable Darkness
-              </Heading>
-            </Appear>
-            <Appear fid="3">
-              <Heading size={1} caps fit textColor="primary">
-                Background Imagery
-              </Heading>
+            <Appear>
+              <List textColor={color.textColor}>
+                <ListItem>React vs AngularJS – How the two Compare | Codementor</ListItem>
+                <ListItem>Angular vs. React - the tie breaker - AirPair</ListItem>
+                <ListItem>Angular 2 versus React: There Will Be Blood — Free Code Camp</ListItem>
+                <ListItem>Is React killing Angular? - Quora</ListItem>
+                <ListItem>Angular vs React : A Side-By-Side Comparison | hack.guides()</ListItem>
+                <ListItem>React vs Angular 2 - compare the incomparable? | Scalac</ListItem>
+                <ListItem>AngularJS vs. React - Which One to Pick? - The Media Temple Blog</ListItem>
+                <ListItem>Angular vs Backbone vs React vs Ember notes · GitHub</ListItem>
+                <ListItem>Forget Angular & Ember, React Has Already Won the Client-Side War</ListItem>
+              </List>
             </Appear>
           </Slide>
+          <Slide transition={["spin", "slide"]} bgColor="primary">
+            <Table>
+              <thead>
+              <TableRow>
+                <TableHeaderItem>
+                  <Heading size={3} caps textColor="secondary" textFont="primary">
+                    Angular
+                  </Heading>
+                </TableHeaderItem>
+                <TableHeaderItem>
+                  <Heading size={3} caps textColor="secondary" textFont="primary">
+                    React
+                  </Heading>
+                </TableHeaderItem>
+              </TableRow>
+              </thead>
+              <tbody>
+              <TableRow>
+                <TableItem>Regular DOM</TableItem>
+                <TableItem>Virtual DOM</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>2 Way Binding</TableItem>
+                <TableItem>Uni-Directional</TableItem>
+              </TableRow>
+              <TableRow>
+                <TableItem>HTML/Typescript files</TableItem>
+                <TableItem>JSX</TableItem>
+              </TableRow>
+              </tbody>
+            </Table>
+          </Slide>
+          <Slide transition={["spin"]} bgColor="black">
+            <BlockQuote>
+              <Quote textColor="tertiary">To read Angular: Learn a long list of Angular-specific syntax.</Quote>
+            </BlockQuote>
+            <BlockQuote>
+              <Quote textColor="tertiary">To read React: Learn JavaScript.</Quote>
+              <Cite textColor="primary">https://medium.freecodecamp.com/angular-2-versus-react-there-will-be-blood-66595faafd51#.ob9ekdpdf</Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["spin"]} bgColor="black">
+            <BlockQuote>
+              <Quote textColor="tertiary">ngReact</Quote>
+              <Cite textColor="secondary">https://github.com/ngReact/ngReact</Cite>
+            </BlockQuote>
+          </Slide>
+          <Slide transition={["slide"]} bgColor={theme.bgColor}>
+            <Heading size={3} textColor="secondary" textFont="primary">
+              React getting started
+            </Heading>
+            <CodePane
+              lang="html"
+              source={require("raw!../assets/helloworld.html")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+            <Link textColor="secondary" href="http://facebook.github.io/react/docs/getting-started.html">
+              http://facebook.github.io/react/docs/getting-started.html
+            </Link>
+          </Slide>
+          <Slide transition={["slide"]} bgColor={theme.bgColor}>
+            <Heading size={3} textColor="secondary" textFont="primary">
+              React components
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/basic-react-component.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["slide"]} bgColor={theme.bgColor}>
+            <Heading size={3} textColor="secondary" textFont="primary">
+              React props
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-props.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["slide"]} bgColor={theme.bgColor}>
+            <Heading size={3} textColor="secondary" textFont="primary">
+              React states
+            </Heading>
+            <CodePane
+              lang="jsx"
+              source={require("raw!../assets/react-click-count.jsx")}
+              margin="20px auto"
+              textSize="1rem"
+            />
+          </Slide>
+          <Slide transition={["spin"]} bgColor="primary">
+            <Heading size={3} textColor="tertiary" textFont="primary">
+              React states
+            </Heading>
+            <Interactive/>
+          </Slide>
+
           <Slide transition={["zoom", "fade"]} bgColor="primary">
             <Heading caps fit>Flexible Layouts</Heading>
             <Layout>

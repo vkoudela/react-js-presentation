@@ -1,0 +1,43 @@
+1. Predstaviti se
+2. Što je React.js
+- ovo su samo neke od definicija, ali... lib, ne fw
+3. Ajmo malo o Javascriptu
+- postoji hrpa buzz worda
+- posebna expanzija je u zadnjih par godina
+- stigao je Node.js na serverskoj strani, napravio revoluciju
+- hype tehnologije dolaze i prolaze
+- Facebook stoji iza Reacta jer...
+- neću govoriti o transpilerima
+- i malo o Angularu
+4. Često pitanje - react vs angular
+- vrlo česta tema i vrlo čest izvor prepiranja
+5. Izdvajam bitne značajke
+- regular vs virtual DOM objašnjenje / nee jQuery
+- 2way vs 1way - mvvm vs v
++ teško je uspoređivati kad to nisu slične stvari (React+Redux)
++ napravljen je za jednu stvar (Facebook forme, realtime update)
+6. Learning curve
+- React - boljke Javascripta se prenose u React
+7. React in ngReact
+8. Getting started
+9. Tehnikalije React
+- renderiranje react komponenti - ReactDOM ili nestanje
+- komponenta živi u svom sendboxu
+- daje slobodu korištenja
+10. React components
+- instance - pozivanje setProps i setState izvana
+11. React props
+- prosljeđivanje podataka pri renderiranje i prema drugim komponentama
+12. Nestanje childrena
+13. React SVG
+13. Component lifecycle
+- mogućnost rada s nekim drugim libovima
+14. Tooling - React Chrome console
+15. Problem Reacta / problem Javascripta
++ radi samo jednu stvar, nema ajaxa, nema ničega pa treba 3rd party libove
+16. Babel CLI - zapakiraj file u nativni javascript
+
+17. Gotova rješenja u Reactu: React-Bootstrap, Spectable
+
+18. Primjene reacta: Facebook, comment box, WhatsApp web, Instagram.com, Messenger.com
+19. Speedtalk.com.au, questionme.online

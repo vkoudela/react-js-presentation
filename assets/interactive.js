@@ -31,12 +31,12 @@ export default class Interactive extends Component {
       <div>
       {this.state.count < 5 ?
         <div>
-          <Heading size={5} textColor="black">
-            The button has been clicked {this.state.count} times
+          <Heading size={5} textColor="secondary">
+            Tipka je pritisnuta {this.state.count} put{this.state.count != 1 ? "a" : ""}
           </Heading>
-          <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
+          <button style={styles} type="button" onClick={this.handleClick}>Klikni me</button>
         </div> :
-          <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
+          <Heading size={4} fit caps textColor="secondary">Alo! Uspori!</Heading>
         }
       </div>
     );
