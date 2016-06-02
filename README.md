@@ -1,5 +1,5 @@
 # 5. Devz Meetup Varaždin - ReactJS
-Prezentacija ReactJS liba na 5. okupljanju dizajnera i developera u Varaždinu.
+Prezentacija ReactJS liba na [5. okupljanju dizajnera i developera u Varaždinu](http://www.meetup.com/Devz-Meetup-Vara%C5%BEdin/events/231440926/) .
 
 Aktualna verzija ReactJS-a u trenutku izrade ove prezentacije: v15.1.0
 
